@@ -1,0 +1,54 @@
+======================================================================
+OVERWATCH — THREAT INTELLIGENCE REPORT (unsupervised anomaly scan)
+======================================================================
+Generated (UTC):      2026-09-27T21:25:08.002369+00:00
+Source file:          sample/suspicious_logs.log
+Dataset label:        synthetic_test
+
+Total requests analyzed:   149
+Flagged as anomalous:      99 (66.44%)
+Anomaly score range:       [-0.219997, 0.150208]  mean=0.020397 std=0.15449
+
+Top suspicious IPs (by number of flagged requests):
+  - 198.51.100.23                            79 flagged requests
+  - 203.0.113.66                             15 flagged requests
+  - 192.0.2.44                               4 flagged requests
+  - 146.111.20.5                             1 flagged requests
+
+Status code distribution (all traffic):
+  403: 80
+  200: 50
+  404: 15
+  400: 4
+
+Status code distribution (flagged anomalies only):
+  403: 79
+  404: 15
+  400: 4
+  200: 1
+
+Top 10 highest-scoring flagged entries:
+  score=0.1502  ip=192.0.2.44  [1995-08-15T07:08:04+00:00]  GET /download.cgi?file=../../../../etc/passwd -> 400
+      raw: 192.0.2.44 - - [15/Aug/1995:03:08:04 -0400] "GET /download.cgi?file=../../../../etc/passwd HTTP/1.0" 400 0
+  score=0.1489  ip=192.0.2.44  [1995-08-15T07:08:03+00:00]  GET /view.cgi?id=1' OR '1'='1 -> 400
+      raw: 192.0.2.44 - - [15/Aug/1995:03:08:03 -0400] "GET /view.cgi?id=1' OR '1'='1 HTTP/1.0" 400 0
+  score=0.1469  ip=192.0.2.44  [1995-08-15T07:08:05+00:00]  GET /exec.cgi?cmd=;cat%20/etc/shadow -> 400
+      raw: 192.0.2.44 - - [15/Aug/1995:03:08:05 -0400] "GET /exec.cgi?cmd=;cat%20/etc/shadow HTTP/1.0" 400 0
+  score=0.1436  ip=198.51.100.23  [1995-08-15T07:06:06+00:00]  POST /cgi-bin/login.cgi -> 403
+      raw: 198.51.100.23 - - [15/Aug/1995:03:06:06 -0400] "POST /cgi-bin/login.cgi HTTP/1.0" 403 120
+  score=0.1429  ip=198.51.100.23  [1995-08-15T07:06:07+00:00]  POST /cgi-bin/login.cgi -> 403
+      raw: 198.51.100.23 - - [15/Aug/1995:03:06:07 -0400] "POST /cgi-bin/login.cgi HTTP/1.0" 403 120
+  score=0.1429  ip=198.51.100.23  [1995-08-15T07:06:07+00:00]  POST /cgi-bin/login.cgi -> 403
+      raw: 198.51.100.23 - - [15/Aug/1995:03:06:07 -0400] "POST /cgi-bin/login.cgi HTTP/1.0" 403 120
+  score=0.1429  ip=198.51.100.23  [1995-08-15T07:06:07+00:00]  POST /cgi-bin/login.cgi -> 403
+      raw: 198.51.100.23 - - [15/Aug/1995:03:06:07 -0400] "POST /cgi-bin/login.cgi HTTP/1.0" 403 120
+  score=0.1429  ip=198.51.100.23  [1995-08-15T07:06:06+00:00]  POST /cgi-bin/login.cgi -> 403
+      raw: 198.51.100.23 - - [15/Aug/1995:03:06:06 -0400] "POST /cgi-bin/login.cgi HTTP/1.0" 403 120
+  score=0.1429  ip=198.51.100.23  [1995-08-15T07:06:07+00:00]  POST /cgi-bin/login.cgi -> 403
+      raw: 198.51.100.23 - - [15/Aug/1995:03:06:07 -0400] "POST /cgi-bin/login.cgi HTTP/1.0" 403 120
+  score=0.1429  ip=198.51.100.23  [1995-08-15T07:06:07+00:00]  POST /cgi-bin/login.cgi -> 403
+      raw: 198.51.100.23 - - [15/Aug/1995:03:06:07 -0400] "POST /cgi-bin/login.cgi HTTP/1.0" 403 120
+
+----------------------------------------------------------------------
+This report identifies statistical outliers relative to a learned baseline of normal traffic using unsupervised Isolation Forest. It does NOT confirm malicious intent. Every flagged entry should be reviewed by a human analyst before any action is taken.
+======================================================================

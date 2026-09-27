@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Environments
+venv/
+.venv/
+env/
+
+# OS
+.DS_Store
+
+# Large / regenerable data
+data/raw/access.log
+data/processed/*.csv
+data/processed/*.parquet
+
+# IDE
+.vscode/
+.idea/

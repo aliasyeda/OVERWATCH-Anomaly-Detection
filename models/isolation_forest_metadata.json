@@ -1,0 +1,31 @@
+{
+  "trained_on": "data/raw/access.log",
+  "n_rows": 1569888,
+  "n_features": 14,
+  "feature_columns": [
+    "hour",
+    "method_code",
+    "status_class",
+    "is_error",
+    "size",
+    "path_depth",
+    "path_length",
+    "has_query",
+    "is_static_asset",
+    "suspicious_pattern",
+    "ip_requests_so_far",
+    "ip_error_rate_so_far",
+    "ip_unique_paths_so_far",
+    "ip_requests_last_60s"
+  ],
+  "contamination": 0.02,
+  "n_estimators": 200,
+  "n_anomalies_in_training_baseline": 31398,
+  "anomaly_rate_in_training_baseline": 0.020000152877147924,
+  "parse_stats": {
+    "total_lines": 1569898,
+    "parsed_strict": 1566297,
+    "parsed_loose": 3591,
+    "dropped": 10
+  }
+}

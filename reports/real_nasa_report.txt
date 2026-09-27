@@ -1,0 +1,66 @@
+======================================================================
+OVERWATCH — THREAT INTELLIGENCE REPORT (unsupervised anomaly scan)
+======================================================================
+Generated (UTC):      2026-09-27T21:26:18.342995+00:00
+Source file:          data/raw/access.log
+Dataset label:        real
+
+Total requests analyzed:   1,569,888
+Flagged as anomalous:      31,398 (2.00%)
+Anomaly score range:       [-0.248155, 0.148355]  mean=-0.176399 std=0.063667
+
+Top suspicious IPs (by number of flagged requests):
+  - 163.206.89.4                             1560 flagged requests
+  - piweba3y.prodigy.com                     1280 flagged requests
+  - piweba4y.prodigy.com                     1174 flagged requests
+  - piweba5y.prodigy.com                     1165 flagged requests
+  - www-d1.proxy.aol.com                     1065 flagged requests
+  - beta.xerox.com                           935 flagged requests
+  - www-c2.proxy.aol.com                     814 flagged requests
+  - edams.ksc.nasa.gov                       803 flagged requests
+  - www-b3.proxy.aol.com                     651 flagged requests
+  - www-b2.proxy.aol.com                     631 flagged requests
+
+Status code distribution (all traffic):
+  200: 1,398,988
+  304: 134,146
+  302: 26,497
+  404: 10,056
+  403: 171
+  501: 27
+  500: 3
+
+Status code distribution (flagged anomalies only):
+  200: 15,141
+  304: 6,897
+  404: 5,750
+  302: 3,450
+  403: 137
+  501: 21
+  500: 2
+
+Top 10 highest-scoring flagged entries:
+  score=0.1484  ip=piweba4y.prodigy.com  [1995-08-27T06:59:59+00:00]  GET /shuttle/missions/sts-71/images/KSC-95EC-0946.gif" -> 404
+      raw: piweba4y.prodigy.com - - [27/Aug/1995:02:59:59 -0400] "GET /shuttle/missions/sts-71/images/KSC-95EC-0946.gif" HTTP/1.0" 404 -
+  score=0.1484  ip=piweba4y.prodigy.com  [1995-08-27T06:59:39+00:00]  GET /shuttle/missions/sts-71/images/KSC-95EC-0946.gif" -> 404
+      raw: piweba4y.prodigy.com - - [27/Aug/1995:02:59:39 -0400] "GET /shuttle/missions/sts-71/images/KSC-95EC-0946.gif" HTTP/1.0" 404 -
+  score=0.1451  ip=reddragon.ksc.nasa.gov  [1995-09-01T03:17:38+00:00]  GET /shuttle/missions/sts-69/images/contact69?399,236 -> 404
+      raw: reddragon.ksc.nasa.gov - - [31/Aug/1995:23:17:38 -0400] "GET /shuttle/missions/sts-69/images/contact69?399,236 HTTP/1.0" 404 -
+  score=0.1444  ip=reddragon.ksc.nasa.gov  [1995-09-01T03:16:59+00:00]  GET /shuttle/missions/sts-69/images/contact69?271,60 -> 404
+      raw: reddragon.ksc.nasa.gov - - [31/Aug/1995:23:16:59 -0400] "GET /shuttle/missions/sts-69/images/contact69?271,60 HTTP/1.0" 404 -
+  score=0.1444  ip=reddragon.ksc.nasa.gov  [1995-09-01T03:17:31+00:00]  GET /shuttle/missions/sts-69/images/contact69?399,236 -> 404
+      raw: reddragon.ksc.nasa.gov - - [31/Aug/1995:23:17:31 -0400] "GET /shuttle/missions/sts-69/images/contact69?399,236 HTTP/1.0" 404 -
+  score=0.1422  ip=piweba5y.prodigy.com  [1995-08-30T04:52:46+00:00]  GET /shuttle/missions/STS-69/mission-STS-69.html -> 404
+      raw: piweba5y.prodigy.com - - [30/Aug/1995:00:52:46 -0400] "GET /shuttle/missions/STS-69/mission-STS-69.html HTTP/1.0" 404 -
+  score=0.1399  ip=163.206.89.4  [1995-08-30T13:42:27+00:00]  GET /missions -> 404
+      raw: 163.206.89.4 - - [30/Aug/1995:09:42:27 -0400] "GET /missions HTTP/1.0" 404 -
+  score=0.1395  ip=lmcgroom.utmem.edu  [1995-08-30T13:42:21+00:00]  GET /images/KSC-logosmall.gif -> 200
+      raw: lmcgroom.utmem.edu - - [30/Aug/1995:09:42:21 -0400] "GET /images/KSC-logosmall.gif HTTP/1.0" 200 1204
+  score=0.1383  ip=163.206.89.4  [1995-08-29T21:07:15+00:00]  GET /pub/winvn/readme.txt -> 404
+      raw: 163.206.89.4 - - [29/Aug/1995:17:07:15 -0400] "GET /pub/winvn/readme.txt HTTP/1.0" 404 -
+  score=0.1376  ip=piweba5y.prodigy.com  [1995-08-30T04:09:06+00:00]  GET /shuttle/missions/STS-69/mission-STS-69.html -> 404
+      raw: piweba5y.prodigy.com - - [30/Aug/1995:00:09:06 -0400] "GET /shuttle/missions/STS-69/mission-STS-69.html HTTP/1.0" 404 -
+
+----------------------------------------------------------------------
+This report identifies statistical outliers relative to a learned baseline of normal traffic using unsupervised Isolation Forest. It does NOT confirm malicious intent. Every flagged entry should be reviewed by a human analyst before any action is taken.
+======================================================================

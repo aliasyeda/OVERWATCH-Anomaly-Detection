@@ -1,0 +1,2117 @@
+{
+  "report_generated_utc": "2026-09-27T21:26:18.342995+00:00",
+  "source_file": "data/raw/access.log",
+  "dataset_label": "real",
+  "summary": {
+    "total_requests_analyzed": 1569888,
+    "anomalous_requests_flagged": 31398,
+    "anomaly_rate": 0.02,
+    "anomaly_score_min": -0.248155,
+    "anomaly_score_max": 0.148355,
+    "anomaly_score_mean": -0.176399,
+    "anomaly_score_std": 0.063667
+  },
+  "top_suspicious_ips": [
+    {
+      "ip": "163.206.89.4",
+      "flagged_requests": 1560
+    },
+    {
+      "ip": "piweba3y.prodigy.com",
+      "flagged_requests": 1280
+    },
+    {
+      "ip": "piweba4y.prodigy.com",
+      "flagged_requests": 1174
+    },
+    {
+      "ip": "piweba5y.prodigy.com",
+      "flagged_requests": 1165
+    },
+    {
+      "ip": "www-d1.proxy.aol.com",
+      "flagged_requests": 1065
+    },
+    {
+      "ip": "beta.xerox.com",
+      "flagged_requests": 935
+    },
+    {
+      "ip": "www-c2.proxy.aol.com",
+      "flagged_requests": 814
+    },
+    {
+      "ip": "edams.ksc.nasa.gov",
+      "flagged_requests": 803
+    },
+    {
+      "ip": "www-b3.proxy.aol.com",
+      "flagged_requests": 651
+    },
+    {
+      "ip": "www-b2.proxy.aol.com",
+      "flagged_requests": 631
+    },
+    {
+      "ip": "www-c5.proxy.aol.com",
+      "flagged_requests": 630
+    },
+    {
+      "ip": "www-b5.proxy.aol.com",
+      "flagged_requests": 588
+    },
+    {
+      "ip": "www-c3.proxy.aol.com",
+      "flagged_requests": 564
+    },
+    {
+      "ip": "www-d2.proxy.aol.com",
+      "flagged_requests": 549
+    },
+    {
+      "ip": "www-c4.proxy.aol.com",
+      "flagged_requests": 536
+    },
+    {
+      "ip": "www-relay.pa-x.dec.com",
+      "flagged_requests": 506
+    },
+    {
+      "ip": "www-a2.proxy.aol.com",
+      "flagged_requests": 472
+    },
+    {
+      "ip": "www-d3.proxy.aol.com",
+      "flagged_requests": 461
+    },
+    {
+      "ip": "www-c1.proxy.aol.com",
+      "flagged_requests": 456
+    },
+    {
+      "ip": "www-b4.proxy.aol.com",
+      "flagged_requests": 443
+    }
+  ],
+  "status_code_distribution_all_traffic": {
+    "200": 1398988,
+    "304": 134146,
+    "302": 26497,
+    "404": 10056,
+    "403": 171,
+    "501": 27,
+    "500": 3
+  },
+  "status_code_distribution_anomalies": {
+    "200": 15141,
+    "304": 6897,
+    "404": 5750,
+    "302": 3450,
+    "403": 137,
+    "501": 21,
+    "500": 2
+  },
+  "flagged_entries": [
+    {
+      "ip": "piweba4y.prodigy.com",
+      "detection_time_utc": "1995-08-27T06:59:59+00:00",
+      "endpoint": "/shuttle/missions/sts-71/images/KSC-95EC-0946.gif\"",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.148355,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 1,
+        "malformed_request": false,
+        "ip_requests_so_far": 3719,
+        "ip_error_rate_so_far": 0.0065,
+        "ip_unique_paths_so_far": 535,
+        "ip_requests_last_60s": 149
+      },
+      "raw_log_line": "piweba4y.prodigy.com - - [27/Aug/1995:02:59:59 -0400] \"GET /shuttle/missions/sts-71/images/KSC-95EC-0946.gif\" HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba4y.prodigy.com",
+      "detection_time_utc": "1995-08-27T06:59:39+00:00",
+      "endpoint": "/shuttle/missions/sts-71/images/KSC-95EC-0946.gif\"",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.148355,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 1,
+        "malformed_request": false,
+        "ip_requests_so_far": 3718,
+        "ip_error_rate_so_far": 0.0062,
+        "ip_unique_paths_so_far": 534,
+        "ip_requests_last_60s": 148
+      },
+      "raw_log_line": "piweba4y.prodigy.com - - [27/Aug/1995:02:59:39 -0400] \"GET /shuttle/missions/sts-71/images/KSC-95EC-0946.gif\" HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "reddragon.ksc.nasa.gov",
+      "detection_time_utc": "1995-09-01T03:17:38+00:00",
+      "endpoint": "/shuttle/missions/sts-69/images/contact69?399,236",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.145132,
+      "indicators": {
+        "hour": 23,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 665,
+        "ip_error_rate_so_far": 0.0466,
+        "ip_unique_paths_so_far": 185,
+        "ip_requests_last_60s": 457
+      },
+      "raw_log_line": "reddragon.ksc.nasa.gov - - [31/Aug/1995:23:17:38 -0400] \"GET /shuttle/missions/sts-69/images/contact69?399,236 HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "reddragon.ksc.nasa.gov",
+      "detection_time_utc": "1995-09-01T03:16:59+00:00",
+      "endpoint": "/shuttle/missions/sts-69/images/contact69?271,60",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.144392,
+      "indicators": {
+        "hour": 23,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 663,
+        "ip_error_rate_so_far": 0.0437,
+        "ip_unique_paths_so_far": 183,
+        "ip_requests_last_60s": 455
+      },
+      "raw_log_line": "reddragon.ksc.nasa.gov - - [31/Aug/1995:23:16:59 -0400] \"GET /shuttle/missions/sts-69/images/contact69?271,60 HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "reddragon.ksc.nasa.gov",
+      "detection_time_utc": "1995-09-01T03:17:31+00:00",
+      "endpoint": "/shuttle/missions/sts-69/images/contact69?399,236",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.144392,
+      "indicators": {
+        "hour": 23,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 664,
+        "ip_error_rate_so_far": 0.0452,
+        "ip_unique_paths_so_far": 184,
+        "ip_requests_last_60s": 456
+      },
+      "raw_log_line": "reddragon.ksc.nasa.gov - - [31/Aug/1995:23:17:31 -0400] \"GET /shuttle/missions/sts-69/images/contact69?399,236 HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba5y.prodigy.com",
+      "detection_time_utc": "1995-08-30T04:52:46+00:00",
+      "endpoint": "/shuttle/missions/STS-69/mission-STS-69.html",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.142224,
+      "indicators": {
+        "hour": 0,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4272,
+        "ip_error_rate_so_far": 0.0066,
+        "ip_unique_paths_so_far": 710,
+        "ip_requests_last_60s": 236
+      },
+      "raw_log_line": "piweba5y.prodigy.com - - [30/Aug/1995:00:52:46 -0400] \"GET /shuttle/missions/STS-69/mission-STS-69.html HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "163.206.89.4",
+      "detection_time_utc": "1995-08-30T13:42:27+00:00",
+      "endpoint": "/missions",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.139945,
+      "indicators": {
+        "hour": 9,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4367,
+        "ip_error_rate_so_far": 0.0025,
+        "ip_unique_paths_so_far": 671,
+        "ip_requests_last_60s": 270
+      },
+      "raw_log_line": "163.206.89.4 - - [30/Aug/1995:09:42:27 -0400] \"GET /missions HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "lmcgroom.utmem.edu",
+      "detection_time_utc": "1995-08-30T13:42:21+00:00",
+      "endpoint": "/images/KSC-logosmall.gif",
+      "http_method": "GET",
+      "status_code": 200,
+      "response_size_bytes": 1204,
+      "anomaly_score": 0.139455,
+      "indicators": {
+        "hour": 9,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4366,
+        "ip_error_rate_so_far": 0.0023,
+        "ip_unique_paths_so_far": 670,
+        "ip_requests_last_60s": 269
+      },
+      "raw_log_line": "lmcgroom.utmem.edu - - [30/Aug/1995:09:42:21 -0400] \"GET /images/KSC-logosmall.gif HTTP/1.0\" 200 1204"
+    },
+    {
+      "ip": "163.206.89.4",
+      "detection_time_utc": "1995-08-29T21:07:15+00:00",
+      "endpoint": "/pub/winvn/readme.txt",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.138277,
+      "indicators": {
+        "hour": 17,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4105,
+        "ip_error_rate_so_far": 0.0022,
+        "ip_unique_paths_so_far": 625,
+        "ip_requests_last_60s": 1114
+      },
+      "raw_log_line": "163.206.89.4 - - [29/Aug/1995:17:07:15 -0400] \"GET /pub/winvn/readme.txt HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba5y.prodigy.com",
+      "detection_time_utc": "1995-08-30T04:09:06+00:00",
+      "endpoint": "/shuttle/missions/STS-69/mission-STS-69.html",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.137565,
+      "indicators": {
+        "hour": 0,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4220,
+        "ip_error_rate_so_far": 0.0064,
+        "ip_unique_paths_so_far": 702,
+        "ip_requests_last_60s": 184
+      },
+      "raw_log_line": "piweba5y.prodigy.com - - [30/Aug/1995:00:09:06 -0400] \"GET /shuttle/missions/STS-69/mission-STS-69.html HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "www-d2.proxy.aol.com",
+      "detection_time_utc": "1995-08-30T04:58:19+00:00",
+      "endpoint": "/shuttle/missions/technology/sts-newsref/stsref-toc.html",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.137419,
+      "indicators": {
+        "hour": 0,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3161,
+        "ip_error_rate_so_far": 0.0073,
+        "ip_unique_paths_so_far": 591,
+        "ip_requests_last_60s": 126
+      },
+      "raw_log_line": "www-d2.proxy.aol.com - - [30/Aug/1995:00:58:19 -0400] \"GET /shuttle/missions/technology/sts-newsref/stsref-toc.html HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "www-d2.proxy.aol.com",
+      "detection_time_utc": "1995-08-30T04:58:41+00:00",
+      "endpoint": "/shuttle/missions/technology/sts-newsref/stsref-toc.html",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.137419,
+      "indicators": {
+        "hour": 0,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3162,
+        "ip_error_rate_so_far": 0.0076,
+        "ip_unique_paths_so_far": 592,
+        "ip_requests_last_60s": 127
+      },
+      "raw_log_line": "www-d2.proxy.aol.com - - [30/Aug/1995:00:58:41 -0400] \"GET /shuttle/missions/technology/sts-newsref/stsref-toc.html HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "www-d2.proxy.aol.com",
+      "detection_time_utc": "1995-08-30T04:58:51+00:00",
+      "endpoint": "/shuttle/missions/technology/sts-newsref/stsref-toc.html",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.137419,
+      "indicators": {
+        "hour": 0,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3163,
+        "ip_error_rate_so_far": 0.0079,
+        "ip_unique_paths_so_far": 592,
+        "ip_requests_last_60s": 128
+      },
+      "raw_log_line": "www-d2.proxy.aol.com - - [30/Aug/1995:00:58:51 -0400] \"GET /shuttle/missions/technology/sts-newsref/stsref-toc.html HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba3y.prodigy.com",
+      "detection_time_utc": "1995-08-30T03:32:33+00:00",
+      "endpoint": "/shuttle/missions/sts-70/movies/sts-70-launch.mpg",
+      "http_method": "GET",
+      "status_code": 200,
+      "response_size_bytes": 717587,
+      "anomaly_score": 0.135804,
+      "indicators": {
+        "hour": 23,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3840,
+        "ip_error_rate_so_far": 0.0117,
+        "ip_unique_paths_so_far": 612,
+        "ip_requests_last_60s": 313
+      },
+      "raw_log_line": "piweba3y.prodigy.com - - [29/Aug/1995:23:32:33 -0400] \"GET /shuttle/missions/sts-70/movies/sts-70-launch.mpg HTTP/1.0\" 200 717587"
+    },
+    {
+      "ip": "sxjones.apgea.army.mil",
+      "detection_time_utc": "1995-08-31T12:56:33+00:00",
+      "endpoint": "/cgi-bin/pursuit?query=christian+epic+record&first=11&maxhits=10&minterms=1&minscore=0.01&terse=off",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.134767,
+      "indicators": {
+        "hour": 8,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 5,
+        "ip_error_rate_so_far": 0.8,
+        "ip_unique_paths_so_far": 4,
+        "ip_requests_last_60s": 5
+      },
+      "raw_log_line": "sxjones.apgea.army.mil - - [31/Aug/1995:08:56:33 -0400] \"GET /cgi-bin/pursuit?query=christian+epic+record&first=11&maxhits=10&minterms=1&minscore=0.01&terse=off HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "mailhost.magus.co.uk",
+      "detection_time_utc": "1995-08-25T16:50:14+00:00",
+      "endpoint": "/shuttle/missions/sts-60/sts-60-press-kit.txt</A",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.1347,
+      "indicators": {
+        "hour": 12,
+        "is_error": true,
+        "suspicious_pattern": 1,
+        "malformed_request": false,
+        "ip_requests_so_far": 5,
+        "ip_error_rate_so_far": 0.6,
+        "ip_unique_paths_so_far": 3,
+        "ip_requests_last_60s": 1
+      },
+      "raw_log_line": "mailhost.magus.co.uk - - [25/Aug/1995:12:50:14 -0400] \"GET /shuttle/missions/sts-60/sts-60-press-kit.txt</A HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba3y.prodigy.com",
+      "detection_time_utc": "1995-08-31T03:06:21+00:00",
+      "endpoint": "/shuttle/missions/sts-71/movies/sts-71-launch.mpg",
+      "http_method": "GET",
+      "status_code": 200,
+      "response_size_bytes": 1121554,
+      "anomaly_score": 0.133269,
+      "indicators": {
+        "hour": 23,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4145,
+        "ip_error_rate_so_far": 0.0109,
+        "ip_unique_paths_so_far": 647,
+        "ip_requests_last_60s": 226
+      },
+      "raw_log_line": "piweba3y.prodigy.com - - [30/Aug/1995:23:06:21 -0400] \"GET /shuttle/missions/sts-71/movies/sts-71-launch.mpg HTTP/1.0\" 200 1121554"
+    },
+    {
+      "ip": "mailhost.magus.co.uk",
+      "detection_time_utc": "1995-08-25T16:49:33+00:00",
+      "endpoint": "/shuttle/missions/sts-60/sts-60-press-kit.txt</A",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.133112,
+      "indicators": {
+        "hour": 12,
+        "is_error": true,
+        "suspicious_pattern": 1,
+        "malformed_request": false,
+        "ip_requests_so_far": 4,
+        "ip_error_rate_so_far": 0.5,
+        "ip_unique_paths_so_far": 2,
+        "ip_requests_last_60s": 0
+      },
+      "raw_log_line": "mailhost.magus.co.uk - - [25/Aug/1995:12:49:33 -0400] \"GET /shuttle/missions/sts-60/sts-60-press-kit.txt</A HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba3y.prodigy.com",
+      "detection_time_utc": "1995-08-31T06:01:44+00:00",
+      "endpoint": "/cgi-bin/imagemap/countdown69?285,284",
+      "http_method": "GET",
+      "status_code": 302,
+      "response_size_bytes": 85,
+      "anomaly_score": 0.132652,
+      "indicators": {
+        "hour": 2,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4178,
+        "ip_error_rate_so_far": 0.0108,
+        "ip_unique_paths_so_far": 653,
+        "ip_requests_last_60s": 259
+      },
+      "raw_log_line": "piweba3y.prodigy.com - - [31/Aug/1995:02:01:44 -0400] \"GET /cgi-bin/imagemap/countdown69?285,284 HTTP/1.0\" 302 85"
+    },
+    {
+      "ip": "dialip-217.den.mmc.com",
+      "detection_time_utc": "1995-08-30T06:49:35+00:00",
+      "endpoint": "/history/apollo/a-004/docs/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.132467,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 94,
+        "ip_error_rate_so_far": 0.5851,
+        "ip_unique_paths_so_far": 46,
+        "ip_requests_last_60s": 94
+      },
+      "raw_log_line": "dialip-217.den.mmc.com - - [30/Aug/1995:02:49:35 -0400] \"GET /history/apollo/a-004/docs/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "dialip-217.den.mmc.com",
+      "detection_time_utc": "1995-08-30T06:49:40+00:00",
+      "endpoint": "/history/apollo/a-004/news/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.132467,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 96,
+        "ip_error_rate_so_far": 0.5938,
+        "ip_unique_paths_so_far": 47,
+        "ip_requests_last_60s": 96
+      },
+      "raw_log_line": "dialip-217.den.mmc.com - - [30/Aug/1995:02:49:40 -0400] \"GET /history/apollo/a-004/news/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "dialip-217.den.mmc.com",
+      "detection_time_utc": "1995-08-30T06:49:50+00:00",
+      "endpoint": "/history/apollo/a-004/news/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.132467,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 98,
+        "ip_error_rate_so_far": 0.602,
+        "ip_unique_paths_so_far": 48,
+        "ip_requests_last_60s": 98
+      },
+      "raw_log_line": "dialip-217.den.mmc.com - - [30/Aug/1995:02:49:50 -0400] \"GET /history/apollo/a-004/news/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "www-d1.proxy.aol.com",
+      "detection_time_utc": "1995-08-25T07:39:55+00:00",
+      "endpoint": "/shuttle/missions/sts-25/movies/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.131948,
+      "indicators": {
+        "hour": 3,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3086,
+        "ip_error_rate_so_far": 0.0058,
+        "ip_unique_paths_so_far": 665,
+        "ip_requests_last_60s": 240
+      },
+      "raw_log_line": "www-d1.proxy.aol.com - - [25/Aug/1995:03:39:55 -0400] \"GET /shuttle/missions/sts-25/movies/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "dialip-217.den.mmc.com",
+      "detection_time_utc": "1995-08-30T06:49:27+00:00",
+      "endpoint": "/history/apollo/a-004/sounds/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.131497,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 92,
+        "ip_error_rate_so_far": 0.5761,
+        "ip_unique_paths_so_far": 45,
+        "ip_requests_last_60s": 92
+      },
+      "raw_log_line": "dialip-217.den.mmc.com - - [30/Aug/1995:02:49:27 -0400] \"GET /history/apollo/a-004/sounds/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba5y.prodigy.com",
+      "detection_time_utc": "1995-08-30T06:12:56+00:00",
+      "endpoint": "/cgi-bin/imagemap/countdown69?295,287",
+      "http_method": "GET",
+      "status_code": 302,
+      "response_size_bytes": 85,
+      "anomaly_score": 0.131191,
+      "indicators": {
+        "hour": 2,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4296,
+        "ip_error_rate_so_far": 0.0068,
+        "ip_unique_paths_so_far": 711,
+        "ip_requests_last_60s": 254
+      },
+      "raw_log_line": "piweba5y.prodigy.com - - [30/Aug/1995:02:12:56 -0400] \"GET /cgi-bin/imagemap/countdown69?295,287 HTTP/1.0\" 302 85"
+    },
+    {
+      "ip": "piweba3y.prodigy.com",
+      "detection_time_utc": "1995-08-31T05:59:10+00:00",
+      "endpoint": "/cgi-bin/imagemap/countdown69?74,190",
+      "http_method": "GET",
+      "status_code": 302,
+      "response_size_bytes": 96,
+      "anomaly_score": 0.130712,
+      "indicators": {
+        "hour": 1,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4177,
+        "ip_error_rate_so_far": 0.0108,
+        "ip_unique_paths_so_far": 652,
+        "ip_requests_last_60s": 258
+      },
+      "raw_log_line": "piweba3y.prodigy.com - - [31/Aug/1995:01:59:10 -0400] \"GET /cgi-bin/imagemap/countdown69?74,190 HTTP/1.0\" 302 96"
+    },
+    {
+      "ip": "www-d1.proxy.aol.com",
+      "detection_time_utc": "1995-08-25T07:38:54+00:00",
+      "endpoint": "/shuttle/missions/sts-20/movies/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.130495,
+      "indicators": {
+        "hour": 3,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3080,
+        "ip_error_rate_so_far": 0.0052,
+        "ip_unique_paths_so_far": 659,
+        "ip_requests_last_60s": 234
+      },
+      "raw_log_line": "www-d1.proxy.aol.com - - [25/Aug/1995:03:38:54 -0400] \"GET /shuttle/missions/sts-20/movies/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "dialip-217.den.mmc.com",
+      "detection_time_utc": "1995-08-30T06:49:22+00:00",
+      "endpoint": "/history/apollo/a-004/images/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.128984,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 90,
+        "ip_error_rate_so_far": 0.5667,
+        "ip_unique_paths_so_far": 44,
+        "ip_requests_last_60s": 90
+      },
+      "raw_log_line": "dialip-217.den.mmc.com - - [30/Aug/1995:02:49:22 -0400] \"GET /history/apollo/a-004/images/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "redx3.cac.washington.edu",
+      "detection_time_utc": "1995-08-11T00:09:32+00:00",
+      "endpoint": "/shuttle/missions/sts-70/images/KSC-95EC-o667.gif\"",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.128842,
+      "indicators": {
+        "hour": 20,
+        "is_error": true,
+        "suspicious_pattern": 1,
+        "malformed_request": false,
+        "ip_requests_so_far": 15,
+        "ip_error_rate_so_far": 0.4667,
+        "ip_unique_paths_so_far": 9,
+        "ip_requests_last_60s": 9
+      },
+      "raw_log_line": "redx3.cac.washington.edu - - [10/Aug/1995:20:09:32 -0400] \"GET /shuttle/missions/sts-70/images/KSC-95EC-o667.gif\" HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "dialip-217.den.mmc.com",
+      "detection_time_utc": "1995-08-30T06:48:31+00:00",
+      "endpoint": "/history/apollo/a-003/news/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.128664,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 81,
+        "ip_error_rate_so_far": 0.5679,
+        "ip_unique_paths_so_far": 39,
+        "ip_requests_last_60s": 81
+      },
+      "raw_log_line": "dialip-217.den.mmc.com - - [30/Aug/1995:02:48:31 -0400] \"GET /history/apollo/a-003/news/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba4y.prodigy.com",
+      "detection_time_utc": "1995-08-27T06:43:38+00:00",
+      "endpoint": "/shuttle/missions/sts-71/images/KDC-95EC-0911.gif",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.128485,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3712,
+        "ip_error_rate_so_far": 0.0054,
+        "ip_unique_paths_so_far": 531,
+        "ip_requests_last_60s": 142
+      },
+      "raw_log_line": "piweba4y.prodigy.com - - [27/Aug/1995:02:43:38 -0400] \"GET /shuttle/missions/sts-71/images/KDC-95EC-0911.gif HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba4y.prodigy.com",
+      "detection_time_utc": "1995-08-27T06:45:06+00:00",
+      "endpoint": "/shuttle/missions/sts-71/images/KDC-95EC-0911.gif",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.128485,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3713,
+        "ip_error_rate_so_far": 0.0057,
+        "ip_unique_paths_so_far": 532,
+        "ip_requests_last_60s": 143
+      },
+      "raw_log_line": "piweba4y.prodigy.com - - [27/Aug/1995:02:45:06 -0400] \"GET /shuttle/missions/sts-71/images/KDC-95EC-0911.gif HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba4y.prodigy.com",
+      "detection_time_utc": "1995-08-27T06:46:48+00:00",
+      "endpoint": "/shuttle/missions/sts-71/images/ksc-95ec-0911.gif",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.128485,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3715,
+        "ip_error_rate_so_far": 0.0059,
+        "ip_unique_paths_so_far": 533,
+        "ip_requests_last_60s": 145
+      },
+      "raw_log_line": "piweba4y.prodigy.com - - [27/Aug/1995:02:46:48 -0400] \"GET /shuttle/missions/sts-71/images/ksc-95ec-0911.gif HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba3y.prodigy.com",
+      "detection_time_utc": "1995-09-01T02:27:15+00:00",
+      "endpoint": "/shuttle/missions/sts-70/movies/sts-70-approach.mpg",
+      "http_method": "GET",
+      "status_code": 200,
+      "response_size_bytes": 806727,
+      "anomaly_score": 0.127322,
+      "indicators": {
+        "hour": 22,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4388,
+        "ip_error_rate_so_far": 0.0107,
+        "ip_unique_paths_so_far": 676,
+        "ip_requests_last_60s": 169
+      },
+      "raw_log_line": "piweba3y.prodigy.com - - [31/Aug/1995:22:27:15 -0400] \"GET /shuttle/missions/sts-70/movies/sts-70-approach.mpg HTTP/1.0\" 200 806727"
+    },
+    {
+      "ip": "piweba3y.prodigy.com",
+      "detection_time_utc": "1995-08-29T04:21:49+00:00",
+      "endpoint": "/shuttle/missions/sts-68/ksc-upclose.gif",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.127216,
+      "indicators": {
+        "hour": 0,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3466,
+        "ip_error_rate_so_far": 0.0124,
+        "ip_unique_paths_so_far": 591,
+        "ip_requests_last_60s": 238
+      },
+      "raw_log_line": "piweba3y.prodigy.com - - [29/Aug/1995:00:21:49 -0400] \"GET /shuttle/missions/sts-68/ksc-upclose.gif HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba3y.prodigy.com",
+      "detection_time_utc": "1995-08-29T04:26:53+00:00",
+      "endpoint": "/shuttle/missions/sts-68/ksc-upclose.gif",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.127216,
+      "indicators": {
+        "hour": 0,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3469,
+        "ip_error_rate_so_far": 0.0127,
+        "ip_unique_paths_so_far": 592,
+        "ip_requests_last_60s": 241
+      },
+      "raw_log_line": "piweba3y.prodigy.com - - [29/Aug/1995:00:26:53 -0400] \"GET /shuttle/missions/sts-68/ksc-upclose.gif HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "dialip-217.den.mmc.com",
+      "detection_time_utc": "1995-08-30T06:48:22+00:00",
+      "endpoint": "/history/apollo/a-003/docs/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.126976,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 79,
+        "ip_error_rate_so_far": 0.557,
+        "ip_unique_paths_so_far": 38,
+        "ip_requests_last_60s": 79
+      },
+      "raw_log_line": "dialip-217.den.mmc.com - - [30/Aug/1995:02:48:22 -0400] \"GET /history/apollo/a-003/docs/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "dialip-217.den.mmc.com",
+      "detection_time_utc": "1995-08-30T06:48:15+00:00",
+      "endpoint": "/history/apollo/a-003/sounds/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.126495,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 77,
+        "ip_error_rate_so_far": 0.5455,
+        "ip_unique_paths_so_far": 37,
+        "ip_requests_last_60s": 77
+      },
+      "raw_log_line": "dialip-217.den.mmc.com - - [30/Aug/1995:02:48:15 -0400] \"GET /history/apollo/a-003/sounds/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "dialip-217.den.mmc.com",
+      "detection_time_utc": "1995-08-30T06:48:05+00:00",
+      "endpoint": "/history/apollo/a-003/images/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.126495,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 75,
+        "ip_error_rate_so_far": 0.5333,
+        "ip_unique_paths_so_far": 36,
+        "ip_requests_last_60s": 75
+      },
+      "raw_log_line": "dialip-217.den.mmc.com - - [30/Aug/1995:02:48:05 -0400] \"GET /history/apollo/a-003/images/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "redx3.cac.washington.edu",
+      "detection_time_utc": "1995-08-11T00:09:31+00:00",
+      "endpoint": "/shuttle/missions/sts-70/images/KSC-95EC-o667.gif\"",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.126403,
+      "indicators": {
+        "hour": 20,
+        "is_error": true,
+        "suspicious_pattern": 1,
+        "malformed_request": false,
+        "ip_requests_so_far": 14,
+        "ip_error_rate_so_far": 0.4286,
+        "ip_unique_paths_so_far": 8,
+        "ip_requests_last_60s": 8
+      },
+      "raw_log_line": "redx3.cac.washington.edu - - [10/Aug/1995:20:09:31 -0400] \"GET /shuttle/missions/sts-70/images/KSC-95EC-o667.gif\" HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba4y.prodigy.com",
+      "detection_time_utc": "1995-08-28T03:48:08+00:00",
+      "endpoint": "/shuttle/missions/sts-71/movies/sts-71-launch.mpg",
+      "http_method": "GET",
+      "status_code": 200,
+      "response_size_bytes": 1121554,
+      "anomaly_score": 0.12611,
+      "indicators": {
+        "hour": 23,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3943,
+        "ip_error_rate_so_far": 0.0068,
+        "ip_unique_paths_so_far": 571,
+        "ip_requests_last_60s": 216
+      },
+      "raw_log_line": "piweba4y.prodigy.com - - [27/Aug/1995:23:48:08 -0400] \"GET /shuttle/missions/sts-71/movies/sts-71-launch.mpg HTTP/1.0\" 200 1121554"
+    },
+    {
+      "ip": "ara2.acs.muohio.edu",
+      "detection_time_utc": "1995-08-08T00:41:10+00:00",
+      "endpoint": "/history/apollo/apollo-13/apollo1-.html    apollo-1",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.125926,
+      "indicators": {
+        "hour": 20,
+        "is_error": true,
+        "suspicious_pattern": 1,
+        "malformed_request": true,
+        "ip_requests_so_far": 1,
+        "ip_error_rate_so_far": 1.0,
+        "ip_unique_paths_so_far": 1,
+        "ip_requests_last_60s": 1
+      },
+      "raw_log_line": "ara2.acs.muohio.edu - - [07/Aug/1995:20:41:10 -0400] \"GET /history/apollo/apollo-13/apollo1-.html    apollo-1 HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "ara2.acs.muohio.edu",
+      "detection_time_utc": "1995-08-08T00:41:18+00:00",
+      "endpoint": "/history/apollo/apollo-13/apollo1-.html    apollo-1",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.125926,
+      "indicators": {
+        "hour": 20,
+        "is_error": true,
+        "suspicious_pattern": 1,
+        "malformed_request": true,
+        "ip_requests_so_far": 2,
+        "ip_error_rate_so_far": 1.0,
+        "ip_unique_paths_so_far": 1,
+        "ip_requests_last_60s": 2
+      },
+      "raw_log_line": "ara2.acs.muohio.edu - - [07/Aug/1995:20:41:18 -0400] \"GET /history/apollo/apollo-13/apollo1-.html    apollo-1 HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba5y.prodigy.com",
+      "detection_time_utc": "1995-09-01T02:52:00+00:00",
+      "endpoint": "/shuttle/missions/sts-69/movies/sts-69-rollback.mpg",
+      "http_method": "GET",
+      "status_code": 200,
+      "response_size_bytes": 977801,
+      "anomaly_score": 0.125921,
+      "indicators": {
+        "hour": 22,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4568,
+        "ip_error_rate_so_far": 0.0068,
+        "ip_unique_paths_so_far": 726,
+        "ip_requests_last_60s": 132
+      },
+      "raw_log_line": "piweba5y.prodigy.com - - [31/Aug/1995:22:52:00 -0400] \"GET /shuttle/missions/sts-69/movies/sts-69-rollback.mpg HTTP/1.0\" 200 977801"
+    },
+    {
+      "ip": "reddragon.ksc.nasa.gov",
+      "detection_time_utc": "1995-09-01T03:25:01+00:00",
+      "endpoint": "/shuttle/missions/sts-69/images/index69.html",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.12577,
+      "indicators": {
+        "hour": 23,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 677,
+        "ip_error_rate_so_far": 0.0473,
+        "ip_unique_paths_so_far": 190,
+        "ip_requests_last_60s": 469
+      },
+      "raw_log_line": "reddragon.ksc.nasa.gov - - [31/Aug/1995:23:25:01 -0400] \"GET /shuttle/missions/sts-69/images/index69.html HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "yellow66.nada.kth.se",
+      "detection_time_utc": "1995-08-25T15:47:30+00:00",
+      "endpoint": "/history/apollo/apollo 13/movies/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.125359,
+      "indicators": {
+        "hour": 11,
+        "is_error": true,
+        "suspicious_pattern": 1,
+        "malformed_request": true,
+        "ip_requests_so_far": 1,
+        "ip_error_rate_so_far": 1.0,
+        "ip_unique_paths_so_far": 1,
+        "ip_requests_last_60s": 1
+      },
+      "raw_log_line": "yellow66.nada.kth.se - - [25/Aug/1995:11:47:30 -0400] \"GET /history/apollo/apollo 13/movies/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba5y.prodigy.com",
+      "detection_time_utc": "1995-08-30T04:47:58+00:00",
+      "endpoint": "/cgi-bin/imagemap/countdown69?55,219",
+      "http_method": "GET",
+      "status_code": 302,
+      "response_size_bytes": 110,
+      "anomaly_score": 0.12535,
+      "indicators": {
+        "hour": 0,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4266,
+        "ip_error_rate_so_far": 0.0066,
+        "ip_unique_paths_so_far": 706,
+        "ip_requests_last_60s": 230
+      },
+      "raw_log_line": "piweba5y.prodigy.com - - [30/Aug/1995:00:47:58 -0400] \"GET /cgi-bin/imagemap/countdown69?55,219 HTTP/1.0\" 302 110"
+    },
+    {
+      "ip": "dialip-217.den.mmc.com",
+      "detection_time_utc": "1995-08-30T06:47:06+00:00",
+      "endpoint": "/history/apollo/a-002/news/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.125328,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 66,
+        "ip_error_rate_so_far": 0.5303,
+        "ip_unique_paths_so_far": 31,
+        "ip_requests_last_60s": 66
+      },
+      "raw_log_line": "dialip-217.den.mmc.com - - [30/Aug/1995:02:47:06 -0400] \"GET /history/apollo/a-002/news/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "dutdor1.ced.tudelft.nl",
+      "detection_time_utc": "1995-08-30T06:46:55+00:00",
+      "endpoint": "/images/USA-logosmall.gif",
+      "http_method": "GET",
+      "status_code": 200,
+      "response_size_bytes": 234,
+      "anomaly_score": 0.125328,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 64,
+        "ip_error_rate_so_far": 0.5156,
+        "ip_unique_paths_so_far": 31,
+        "ip_requests_last_60s": 64
+      },
+      "raw_log_line": "dutdor1.ced.tudelft.nl - - [30/Aug/1995:02:46:55 -0400] \"GET /images/USA-logosmall.gif HTTP/1.0\" 200 234"
+    },
+    {
+      "ip": "dialip-217.den.mmc.com",
+      "detection_time_utc": "1995-08-30T06:46:47+00:00",
+      "endpoint": "/history/apollo/a-002/docs/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.125328,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 62,
+        "ip_error_rate_so_far": 0.5,
+        "ip_unique_paths_so_far": 31,
+        "ip_requests_last_60s": 62
+      },
+      "raw_log_line": "dialip-217.den.mmc.com - - [30/Aug/1995:02:46:47 -0400] \"GET /history/apollo/a-002/docs/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "199.174.154.73",
+      "detection_time_utc": "1995-08-13T21:45:44+00:00",
+      "endpoint": "/Titles?qt=Vienna+Austria",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.125203,
+      "indicators": {
+        "hour": 17,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4,
+        "ip_error_rate_so_far": 0.25,
+        "ip_unique_paths_so_far": 3,
+        "ip_requests_last_60s": 4
+      },
+      "raw_log_line": "199.174.154.73 - - [13/Aug/1995:17:45:44 -0400] \"GET /Titles?qt=Vienna+Austria HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "hpws166.hctg.saic.com",
+      "detection_time_utc": "1995-08-20T23:58:17+00:00",
+      "endpoint": "/shuttle/missions/missions.html",
+      "http_method": "GET",
+      "status_code": 200,
+      "response_size_bytes": 8677,
+      "anomaly_score": 0.125174,
+      "indicators": {
+        "hour": 19,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 1,
+        "ip_error_rate_so_far": 1.0,
+        "ip_unique_paths_so_far": 1,
+        "ip_requests_last_60s": 1
+      },
+      "raw_log_line": "hpws166.hctg.saic.com - - [20/Aug/1995:19:58:17 -0400] \"GET /shuttle/missions/missions.html HTTP/1.0\" 200 8677"
+    },
+    {
+      "ip": "seabrk.mindspring.com",
+      "detection_time_utc": "1995-08-20T23:58:23+00:00",
+      "endpoint": "/shuttle/missions/sts-73/sts-73-patch-small.gif",
+      "http_method": "POST",
+      "status_code": 501,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.12509,
+      "indicators": {
+        "hour": 19,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3,
+        "ip_error_rate_so_far": 1.0,
+        "ip_unique_paths_so_far": 3,
+        "ip_requests_last_60s": 3
+      },
+      "raw_log_line": "seabrk.mindspring.com - - [20/Aug/1995:19:58:23 -0400] \"POST /shuttle/missions/sts-73/sts-73-patch-small.gif HTTP/1.0\" 501 -"
+    },
+    {
+      "ip": "www-relay.pa-x.dec.com",
+      "detection_time_utc": "1995-08-30T12:35:54+00:00",
+      "endpoint": "/shuttle/missions/technology/sts-newsref/stsref-toc.html",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.125056,
+      "indicators": {
+        "hour": 8,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 2559,
+        "ip_error_rate_so_far": 0.0074,
+        "ip_unique_paths_so_far": 962,
+        "ip_requests_last_60s": 49
+      },
+      "raw_log_line": "www-relay.pa-x.dec.com - - [30/Aug/1995:08:35:54 -0400] \"GET /shuttle/missions/technology/sts-newsref/stsref-toc.html HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba5y.prodigy.com",
+      "detection_time_utc": "1995-08-30T17:32:10+00:00",
+      "endpoint": "/shuttle/missions/STS-69/mission-STS-69.html",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.125026,
+      "indicators": {
+        "hour": 13,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4348,
+        "ip_error_rate_so_far": 0.0069,
+        "ip_unique_paths_so_far": 714,
+        "ip_requests_last_60s": 196
+      },
+      "raw_log_line": "piweba5y.prodigy.com - - [30/Aug/1995:13:32:10 -0400] \"GET /shuttle/missions/STS-69/mission-STS-69.html HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba5y.prodigy.com",
+      "detection_time_utc": "1995-08-30T17:32:00+00:00",
+      "endpoint": "/shuttle/missions/STS-69/mission-STS-69.html",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.124786,
+      "indicators": {
+        "hour": 13,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4347,
+        "ip_error_rate_so_far": 0.0067,
+        "ip_unique_paths_so_far": 714,
+        "ip_requests_last_60s": 195
+      },
+      "raw_log_line": "piweba5y.prodigy.com - - [30/Aug/1995:13:32:00 -0400] \"GET /shuttle/missions/STS-69/mission-STS-69.html HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "imhfhp28.epfl.ch",
+      "detection_time_utc": "1995-08-16T15:44:35+00:00",
+      "endpoint": "/shuttle/technology/sts-newsref/sts-newsref/stsref-toc.html",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.124716,
+      "indicators": {
+        "hour": 11,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 2,
+        "ip_error_rate_so_far": 1.0,
+        "ip_unique_paths_so_far": 2,
+        "ip_requests_last_60s": 2
+      },
+      "raw_log_line": "imhfhp28.epfl.ch - - [16/Aug/1995:11:44:35 -0400] \"GET /shuttle/technology/sts-newsref/sts-newsref/stsref-toc.html HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba4y.prodigy.com",
+      "detection_time_utc": "1995-08-28T03:19:53+00:00",
+      "endpoint": "/shuttle/missions/sts-71/movies/sts-71-launch.mpg",
+      "http_method": "GET",
+      "status_code": 200,
+      "response_size_bytes": 1121554,
+      "anomaly_score": 0.124668,
+      "indicators": {
+        "hour": 23,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3925,
+        "ip_error_rate_so_far": 0.0064,
+        "ip_unique_paths_so_far": 570,
+        "ip_requests_last_60s": 198
+      },
+      "raw_log_line": "piweba4y.prodigy.com - - [27/Aug/1995:23:19:53 -0400] \"GET /shuttle/missions/sts-71/movies/sts-71-launch.mpg HTTP/1.0\" 200 1121554"
+    },
+    {
+      "ip": "imhfhp28.epfl.ch",
+      "detection_time_utc": "1995-08-16T15:43:39+00:00",
+      "endpoint": "/shuttle/technology/sts-newsref/stsref-toc.htmlttle/technology/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.124638,
+      "indicators": {
+        "hour": 11,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 1,
+        "ip_error_rate_so_far": 1.0,
+        "ip_unique_paths_so_far": 1,
+        "ip_requests_last_60s": 1
+      },
+      "raw_log_line": "imhfhp28.epfl.ch - - [16/Aug/1995:11:43:39 -0400] \"GET /shuttle/technology/sts-newsref/stsref-toc.htmlttle/technology/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba4y.prodigy.com",
+      "detection_time_utc": "1995-08-29T11:31:35+00:00",
+      "endpoint": "/cgi-bin/imagemap/countdown69?65,161",
+      "http_method": "GET",
+      "status_code": 302,
+      "response_size_bytes": 111,
+      "anomaly_score": 0.124636,
+      "indicators": {
+        "hour": 7,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4385,
+        "ip_error_rate_so_far": 0.0062,
+        "ip_unique_paths_so_far": 604,
+        "ip_requests_last_60s": 331
+      },
+      "raw_log_line": "piweba4y.prodigy.com - - [29/Aug/1995:07:31:35 -0400] \"GET /cgi-bin/imagemap/countdown69?65,161 HTTP/1.0\" 302 111"
+    },
+    {
+      "ip": "piweba4y.prodigy.com",
+      "detection_time_utc": "1995-08-29T11:36:16+00:00",
+      "endpoint": "/cgi-bin/imagemap/countdown69?59,216",
+      "http_method": "GET",
+      "status_code": 302,
+      "response_size_bytes": 110,
+      "anomaly_score": 0.124636,
+      "indicators": {
+        "hour": 7,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4391,
+        "ip_error_rate_so_far": 0.0061,
+        "ip_unique_paths_so_far": 605,
+        "ip_requests_last_60s": 337
+      },
+      "raw_log_line": "piweba4y.prodigy.com - - [29/Aug/1995:07:36:16 -0400] \"GET /cgi-bin/imagemap/countdown69?59,216 HTTP/1.0\" 302 110"
+    },
+    {
+      "ip": "piweba4y.prodigy.com",
+      "detection_time_utc": "1995-08-29T03:21:20+00:00",
+      "endpoint": "/cgi-bin/imagemap/countdown69?288,281",
+      "http_method": "GET",
+      "status_code": 302,
+      "response_size_bytes": 85,
+      "anomaly_score": 0.124527,
+      "indicators": {
+        "hour": 23,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4318,
+        "ip_error_rate_so_far": 0.0063,
+        "ip_unique_paths_so_far": 597,
+        "ip_requests_last_60s": 352
+      },
+      "raw_log_line": "piweba4y.prodigy.com - - [28/Aug/1995:23:21:20 -0400] \"GET /cgi-bin/imagemap/countdown69?288,281 HTTP/1.0\" 302 85"
+    },
+    {
+      "ip": "koriel.sun.com",
+      "detection_time_utc": "1995-08-31T14:55:53+00:00",
+      "endpoint": "/shuttle/missions/sts-32/classes/net/www/content/image/jpeg.class",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.124471,
+      "indicators": {
+        "hour": 10,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 1707,
+        "ip_error_rate_so_far": 0.0047,
+        "ip_unique_paths_so_far": 914,
+        "ip_requests_last_60s": 133
+      },
+      "raw_log_line": "koriel.sun.com - - [31/Aug/1995:10:55:53 -0400] \"GET /shuttle/missions/sts-32/classes/net/www/content/image/jpeg.class HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba4y.prodigy.com",
+      "detection_time_utc": "1995-08-31T02:56:23+00:00",
+      "endpoint": "/shuttle/missions/sts-71/mission-sts-71.htm1",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.124468,
+      "indicators": {
+        "hour": 22,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4742,
+        "ip_error_rate_so_far": 0.0061,
+        "ip_unique_paths_so_far": 659,
+        "ip_requests_last_60s": 184
+      },
+      "raw_log_line": "piweba4y.prodigy.com - - [30/Aug/1995:22:56:23 -0400] \"GET /shuttle/missions/sts-71/mission-sts-71.htm1 HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba5y.prodigy.com",
+      "detection_time_utc": "1995-08-30T04:47:26+00:00",
+      "endpoint": "/cgi-bin/imagemap/countdown69?57,189",
+      "http_method": "GET",
+      "status_code": 302,
+      "response_size_bytes": 96,
+      "anomaly_score": 0.12439,
+      "indicators": {
+        "hour": 0,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4265,
+        "ip_error_rate_so_far": 0.0066,
+        "ip_unique_paths_so_far": 705,
+        "ip_requests_last_60s": 229
+      },
+      "raw_log_line": "piweba5y.prodigy.com - - [30/Aug/1995:00:47:26 -0400] \"GET /cgi-bin/imagemap/countdown69?57,189 HTTP/1.0\" 302 96"
+    },
+    {
+      "ip": "piweba5y.prodigy.com",
+      "detection_time_utc": "1995-08-30T06:09:46+00:00",
+      "endpoint": "/cgi-bin/imagemap/countdown69?63,255",
+      "http_method": "GET",
+      "status_code": 302,
+      "response_size_bytes": 95,
+      "anomaly_score": 0.12439,
+      "indicators": {
+        "hour": 2,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4285,
+        "ip_error_rate_so_far": 0.0068,
+        "ip_unique_paths_so_far": 710,
+        "ip_requests_last_60s": 243
+      },
+      "raw_log_line": "piweba5y.prodigy.com - - [30/Aug/1995:02:09:46 -0400] \"GET /cgi-bin/imagemap/countdown69?63,255 HTTP/1.0\" 302 95"
+    },
+    {
+      "ip": "piweba3y.prodigy.com",
+      "detection_time_utc": "1995-08-30T13:30:46+00:00",
+      "endpoint": "/cgi-bin/imagemap/countdown69?63,188",
+      "http_method": "GET",
+      "status_code": 302,
+      "response_size_bytes": 96,
+      "anomaly_score": 0.12433,
+      "indicators": {
+        "hour": 9,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3932,
+        "ip_error_rate_so_far": 0.0114,
+        "ip_unique_paths_so_far": 624,
+        "ip_requests_last_60s": 353
+      },
+      "raw_log_line": "piweba3y.prodigy.com - - [30/Aug/1995:09:30:46 -0400] \"GET /cgi-bin/imagemap/countdown69?63,188 HTTP/1.0\" 302 96"
+    },
+    {
+      "ip": "seabrk.mindspring.com",
+      "detection_time_utc": "1995-08-20T23:58:20+00:00",
+      "endpoint": "/shuttle/missions/sts-6/sts-6-patch-small.gif",
+      "http_method": "POST",
+      "status_code": 501,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.124111,
+      "indicators": {
+        "hour": 19,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 2,
+        "ip_error_rate_so_far": 1.0,
+        "ip_unique_paths_so_far": 2,
+        "ip_requests_last_60s": 2
+      },
+      "raw_log_line": "seabrk.mindspring.com - - [20/Aug/1995:19:58:20 -0400] \"POST /shuttle/missions/sts-6/sts-6-patch-small.gif HTTP/1.0\" 501 -"
+    },
+    {
+      "ip": "www-d1.proxy.aol.com",
+      "detection_time_utc": "1995-08-30T02:04:08+00:00",
+      "endpoint": "/shuttle/missions/sts-69/movies/sts-69-crew-arrival.mpg",
+      "http_method": "GET",
+      "status_code": 200,
+      "response_size_bytes": 1083124,
+      "anomaly_score": 0.123978,
+      "indicators": {
+        "hour": 22,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3658,
+        "ip_error_rate_so_far": 0.0063,
+        "ip_unique_paths_so_far": 730,
+        "ip_requests_last_60s": 114
+      },
+      "raw_log_line": "www-d1.proxy.aol.com - - [29/Aug/1995:22:04:08 -0400] \"GET /shuttle/missions/sts-69/movies/sts-69-crew-arrival.mpg HTTP/1.0\" 200 1083124"
+    },
+    {
+      "ip": "piweba5y.prodigy.com",
+      "detection_time_utc": "1995-08-30T04:11:23+00:00",
+      "endpoint": "/shuttle/missions/sts-69/movies/sts-69-payloads.mpg",
+      "http_method": "GET",
+      "status_code": 200,
+      "response_size_bytes": 537920,
+      "anomaly_score": 0.123817,
+      "indicators": {
+        "hour": 0,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4230,
+        "ip_error_rate_so_far": 0.0066,
+        "ip_unique_paths_so_far": 703,
+        "ip_requests_last_60s": 194
+      },
+      "raw_log_line": "piweba5y.prodigy.com - - [30/Aug/1995:00:11:23 -0400] \"GET /shuttle/missions/sts-69/movies/sts-69-payloads.mpg HTTP/1.0\" 200 537920"
+    },
+    {
+      "ip": "redx3.cac.washington.edu",
+      "detection_time_utc": "1995-08-11T00:08:41+00:00",
+      "endpoint": "/shuttle/missions/sts-70/images/ksc-95ec-o667.gif\"",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.123777,
+      "indicators": {
+        "hour": 20,
+        "is_error": true,
+        "suspicious_pattern": 1,
+        "malformed_request": false,
+        "ip_requests_so_far": 13,
+        "ip_error_rate_so_far": 0.3846,
+        "ip_unique_paths_so_far": 8,
+        "ip_requests_last_60s": 7
+      },
+      "raw_log_line": "redx3.cac.washington.edu - - [10/Aug/1995:20:08:41 -0400] \"GET /shuttle/missions/sts-70/images/ksc-95ec-o667.gif\" HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "155.148.25.4",
+      "detection_time_utc": "1995-08-25T00:02:59+00:00",
+      "endpoint": "/history/apollo/pad-abort-test-1/pad-abort-test-1-patch-small.gif",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.123493,
+      "indicators": {
+        "hour": 20,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 91,
+        "ip_error_rate_so_far": 0.4396,
+        "ip_unique_paths_so_far": 65,
+        "ip_requests_last_60s": 91
+      },
+      "raw_log_line": "155.148.25.4 - - [24/Aug/1995:20:02:59 -0400] \"GET /history/apollo/pad-abort-test-1/pad-abort-test-1-patch-small.gif HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "155.148.25.4",
+      "detection_time_utc": "1995-08-25T00:02:53+00:00",
+      "endpoint": "/history/apollo/pad-abort-test-1/pad-abort-test-1-patch-small.gif",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.123493,
+      "indicators": {
+        "hour": 20,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 90,
+        "ip_error_rate_so_far": 0.4333,
+        "ip_unique_paths_so_far": 64,
+        "ip_requests_last_60s": 90
+      },
+      "raw_log_line": "155.148.25.4 - - [24/Aug/1995:20:02:53 -0400] \"GET /history/apollo/pad-abort-test-1/pad-abort-test-1-patch-small.gif HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "155.148.25.4",
+      "detection_time_utc": "1995-08-25T00:03:04+00:00",
+      "endpoint": "/history/apollo/pad-abort-test-1/pad-abort-test-1-patch-small.gif",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.123493,
+      "indicators": {
+        "hour": 20,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 93,
+        "ip_error_rate_so_far": 0.4516,
+        "ip_unique_paths_so_far": 66,
+        "ip_requests_last_60s": 93
+      },
+      "raw_log_line": "155.148.25.4 - - [24/Aug/1995:20:03:04 -0400] \"GET /history/apollo/pad-abort-test-1/pad-abort-test-1-patch-small.gif HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba5y.prodigy.com",
+      "detection_time_utc": "1995-08-30T04:10:23+00:00",
+      "endpoint": "/cgi-bin/imagemap/countdown69?178,284",
+      "http_method": "GET",
+      "status_code": 302,
+      "response_size_bytes": 110,
+      "anomaly_score": 0.123191,
+      "indicators": {
+        "hour": 0,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4222,
+        "ip_error_rate_so_far": 0.0066,
+        "ip_unique_paths_so_far": 702,
+        "ip_requests_last_60s": 186
+      },
+      "raw_log_line": "piweba5y.prodigy.com - - [30/Aug/1995:00:10:23 -0400] \"GET /cgi-bin/imagemap/countdown69?178,284 HTTP/1.0\" 302 110"
+    },
+    {
+      "ip": "piweba4y.prodigy.com",
+      "detection_time_utc": "1995-08-29T03:18:56+00:00",
+      "endpoint": "/cgi-bin/imagemap/countdown69?69,185",
+      "http_method": "GET",
+      "status_code": 302,
+      "response_size_bytes": 96,
+      "anomaly_score": 0.123088,
+      "indicators": {
+        "hour": 23,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4317,
+        "ip_error_rate_so_far": 0.0063,
+        "ip_unique_paths_so_far": 596,
+        "ip_requests_last_60s": 351
+      },
+      "raw_log_line": "piweba4y.prodigy.com - - [28/Aug/1995:23:18:56 -0400] \"GET /cgi-bin/imagemap/countdown69?69,185 HTTP/1.0\" 302 96"
+    },
+    {
+      "ip": "ub7.ub.umu.se",
+      "detection_time_utc": "1995-08-31T12:56:44+00:00",
+      "endpoint": "/icons/unknown.xbm",
+      "http_method": "GET",
+      "status_code": 304,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.122874,
+      "indicators": {
+        "hour": 8,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 6,
+        "ip_error_rate_so_far": 0.8333,
+        "ip_unique_paths_so_far": 5,
+        "ip_requests_last_60s": 6
+      },
+      "raw_log_line": "ub7.ub.umu.se - - [31/Aug/1995:08:56:44 -0400] \"GET /icons/unknown.xbm HTTP/1.0\" 304 0"
+    },
+    {
+      "ip": "dialip-217.den.mmc.com",
+      "detection_time_utc": "1995-08-30T06:46:37+00:00",
+      "endpoint": "/history/apollo/a-002/docs/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.122733,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 60,
+        "ip_error_rate_so_far": 0.4833,
+        "ip_unique_paths_so_far": 30,
+        "ip_requests_last_60s": 60
+      },
+      "raw_log_line": "dialip-217.den.mmc.com - - [30/Aug/1995:02:46:37 -0400] \"GET /history/apollo/a-002/docs/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "dialip-217.den.mmc.com",
+      "detection_time_utc": "1995-08-30T06:50:06+00:00",
+      "endpoint": "/history/apollo/a-004/a-004-patch-small.gif",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.122724,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 101,
+        "ip_error_rate_so_far": 0.604,
+        "ip_unique_paths_so_far": 49,
+        "ip_requests_last_60s": 101
+      },
+      "raw_log_line": "dialip-217.den.mmc.com - - [30/Aug/1995:02:50:06 -0400] \"GET /history/apollo/a-004/a-004-patch-small.gif HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "163.206.89.4",
+      "detection_time_utc": "1995-08-30T17:53:27+00:00",
+      "endpoint": "/cgi-bin/imagemap/countdown69?294,292",
+      "http_method": "GET",
+      "status_code": 302,
+      "response_size_bytes": 85,
+      "anomaly_score": 0.12232,
+      "indicators": {
+        "hour": 13,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4445,
+        "ip_error_rate_so_far": 0.0027,
+        "ip_unique_paths_so_far": 681,
+        "ip_requests_last_60s": 338
+      },
+      "raw_log_line": "163.206.89.4 - - [30/Aug/1995:13:53:27 -0400] \"GET /cgi-bin/imagemap/countdown69?294,292 HTTP/1.0\" 302 85"
+    },
+    {
+      "ip": "edams.ksc.nasa.gov",
+      "detection_time_utc": "1995-08-15T15:57:24+00:00",
+      "endpoint": "/i",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.12217,
+      "indicators": {
+        "hour": 11,
+        "is_error": true,
+        "suspicious_pattern": 1,
+        "malformed_request": true,
+        "ip_requests_so_far": 2649,
+        "ip_error_rate_so_far": 0.0019,
+        "ip_unique_paths_so_far": 176,
+        "ip_requests_last_60s": 193
+      },
+      "raw_log_line": "edams.ksc.nasa.gov - - [15/Aug/1995:11:57:24 -0400] \"GET /i\" 404 -"
+    },
+    {
+      "ip": "edams.ksc.nasa.gov",
+      "detection_time_utc": "1995-08-15T15:57:24+00:00",
+      "endpoint": "/i",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.121931,
+      "indicators": {
+        "hour": 11,
+        "is_error": true,
+        "suspicious_pattern": 1,
+        "malformed_request": true,
+        "ip_requests_so_far": 2650,
+        "ip_error_rate_so_far": 0.0023,
+        "ip_unique_paths_so_far": 177,
+        "ip_requests_last_60s": 194
+      },
+      "raw_log_line": "edams.ksc.nasa.gov - - [15/Aug/1995:11:57:24 -0400] \"GET /i\" 404 -"
+    },
+    {
+      "ip": "piweba4y.prodigy.com",
+      "detection_time_utc": "1995-08-29T02:00:51+00:00",
+      "endpoint": "/cgi-bin/imagemap/countdown69?291,287",
+      "http_method": "GET",
+      "status_code": 302,
+      "response_size_bytes": 85,
+      "anomaly_score": 0.121891,
+      "indicators": {
+        "hour": 22,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4261,
+        "ip_error_rate_so_far": 0.0063,
+        "ip_unique_paths_so_far": 594,
+        "ip_requests_last_60s": 295
+      },
+      "raw_log_line": "piweba4y.prodigy.com - - [28/Aug/1995:22:00:51 -0400] \"GET /cgi-bin/imagemap/countdown69?291,287 HTTP/1.0\" 302 85"
+    },
+    {
+      "ip": "dialip-217.den.mmc.com",
+      "detection_time_utc": "1995-08-30T06:46:31+00:00",
+      "endpoint": "/history/apollo/a-002/images/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.121776,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 58,
+        "ip_error_rate_so_far": 0.4655,
+        "ip_unique_paths_so_far": 29,
+        "ip_requests_last_60s": 58
+      },
+      "raw_log_line": "dialip-217.den.mmc.com - - [30/Aug/1995:02:46:31 -0400] \"GET /history/apollo/a-002/images/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "dialip-217.den.mmc.com",
+      "detection_time_utc": "1995-08-30T06:49:55+00:00",
+      "endpoint": "/history/apollo/a-004/a-004-patch-small.gif",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.121767,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 99,
+        "ip_error_rate_so_far": 0.6061,
+        "ip_unique_paths_so_far": 48,
+        "ip_requests_last_60s": 99
+      },
+      "raw_log_line": "dialip-217.den.mmc.com - - [30/Aug/1995:02:49:55 -0400] \"GET /history/apollo/a-004/a-004-patch-small.gif HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba4y.prodigy.com",
+      "detection_time_utc": "1995-08-31T06:37:52+00:00",
+      "endpoint": "/cgi-bin/imagemap/countdown69?72,154",
+      "http_method": "GET",
+      "status_code": 302,
+      "response_size_bytes": 111,
+      "anomaly_score": 0.121755,
+      "indicators": {
+        "hour": 2,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4760,
+        "ip_error_rate_so_far": 0.0063,
+        "ip_unique_paths_so_far": 660,
+        "ip_requests_last_60s": 202
+      },
+      "raw_log_line": "piweba4y.prodigy.com - - [31/Aug/1995:02:37:52 -0400] \"GET /cgi-bin/imagemap/countdown69?72,154 HTTP/1.0\" 302 111"
+    },
+    {
+      "ip": "163.206.89.4",
+      "detection_time_utc": "1995-08-30T13:58:50+00:00",
+      "endpoint": "/cgi-bin/imagemap/countdown69?73,222",
+      "http_method": "GET",
+      "status_code": 302,
+      "response_size_bytes": 110,
+      "anomaly_score": 0.121682,
+      "indicators": {
+        "hour": 9,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4384,
+        "ip_error_rate_so_far": 0.0027,
+        "ip_unique_paths_so_far": 674,
+        "ip_requests_last_60s": 277
+      },
+      "raw_log_line": "163.206.89.4 - - [30/Aug/1995:09:58:50 -0400] \"GET /cgi-bin/imagemap/countdown69?73,222 HTTP/1.0\" 302 110"
+    },
+    {
+      "ip": "dialip-217.den.mmc.com",
+      "detection_time_utc": "1995-08-30T06:45:41+00:00",
+      "endpoint": "/history/apollo/a-001/movies/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.121298,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 53,
+        "ip_error_rate_so_far": 0.4528,
+        "ip_unique_paths_so_far": 26,
+        "ip_requests_last_60s": 53
+      },
+      "raw_log_line": "dialip-217.den.mmc.com - - [30/Aug/1995:02:45:41 -0400] \"GET /history/apollo/a-001/movies/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "163.206.89.4",
+      "detection_time_utc": "1995-08-31T18:40:34+00:00",
+      "endpoint": "/statistics/1995/bkup/Mar95_full.html",
+      "http_method": "GET",
+      "status_code": 200,
+      "response_size_bytes": 3155499,
+      "anomaly_score": 0.121207,
+      "indicators": {
+        "hour": 14,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4790,
+        "ip_error_rate_so_far": 0.0025,
+        "ip_unique_paths_so_far": 713,
+        "ip_requests_last_60s": 257
+      },
+      "raw_log_line": "163.206.89.4 - - [31/Aug/1995:14:40:34 -0400] \"GET /statistics/1995/bkup/Mar95_full.html HTTP/1.0\" 200 3155499"
+    },
+    {
+      "ip": "piweba3y.prodigy.com",
+      "detection_time_utc": "1995-08-29T02:31:03+00:00",
+      "endpoint": "/shuttle/missions/sts-53/movies/sts-53-launch.mpg",
+      "http_method": "GET",
+      "status_code": 200,
+      "response_size_bytes": 1269716,
+      "anomaly_score": 0.121069,
+      "indicators": {
+        "hour": 22,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3440,
+        "ip_error_rate_so_far": 0.0125,
+        "ip_unique_paths_so_far": 589,
+        "ip_requests_last_60s": 212
+      },
+      "raw_log_line": "piweba3y.prodigy.com - - [28/Aug/1995:22:31:03 -0400] \"GET /shuttle/missions/sts-53/movies/sts-53-launch.mpg HTTP/1.0\" 200 1269716"
+    },
+    {
+      "ip": "piweba4y.prodigy.com",
+      "detection_time_utc": "1995-08-28T10:57:19+00:00",
+      "endpoint": "/shuttle/missions/sts-71/movies/sts-71-launch.mpg",
+      "http_method": "GET",
+      "status_code": 200,
+      "response_size_bytes": 1121554,
+      "anomaly_score": 0.121054,
+      "indicators": {
+        "hour": 6,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3973,
+        "ip_error_rate_so_far": 0.0068,
+        "ip_unique_paths_so_far": 573,
+        "ip_requests_last_60s": 222
+      },
+      "raw_log_line": "piweba4y.prodigy.com - - [28/Aug/1995:06:57:19 -0400] \"GET /shuttle/missions/sts-71/movies/sts-71-launch.mpg HTTP/1.0\" 200 1121554"
+    },
+    {
+      "ip": "gate.barr.com",
+      "detection_time_utc": "1995-08-20T23:57:06+00:00",
+      "endpoint": "/history/apollo/pad-abort-test-1/pad-abort-test-1-patch-small.gif",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.121022,
+      "indicators": {
+        "hour": 19,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 90,
+        "ip_error_rate_so_far": 0.3778,
+        "ip_unique_paths_so_far": 66,
+        "ip_requests_last_60s": 90
+      },
+      "raw_log_line": "gate.barr.com - - [20/Aug/1995:19:57:06 -0400] \"GET /history/apollo/pad-abort-test-1/pad-abort-test-1-patch-small.gif HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "gate.barr.com",
+      "detection_time_utc": "1995-08-20T23:57:13+00:00",
+      "endpoint": "/history/apollo/pad-abort-test-1/pad-abort-test-1-patch-small.gif",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.121022,
+      "indicators": {
+        "hour": 19,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 93,
+        "ip_error_rate_so_far": 0.3978,
+        "ip_unique_paths_so_far": 68,
+        "ip_requests_last_60s": 93
+      },
+      "raw_log_line": "gate.barr.com - - [20/Aug/1995:19:57:13 -0400] \"GET /history/apollo/pad-abort-test-1/pad-abort-test-1-patch-small.gif HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "gate.barr.com",
+      "detection_time_utc": "1995-08-20T23:57:10+00:00",
+      "endpoint": "/history/apollo/pad-abort-test-1/pad-abort-test-1-patch-small.gif",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.121022,
+      "indicators": {
+        "hour": 19,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 91,
+        "ip_error_rate_so_far": 0.3846,
+        "ip_unique_paths_so_far": 67,
+        "ip_requests_last_60s": 91
+      },
+      "raw_log_line": "gate.barr.com - - [20/Aug/1995:19:57:10 -0400] \"GET /history/apollo/pad-abort-test-1/pad-abort-test-1-patch-small.gif HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "piweba3y.prodigy.com",
+      "detection_time_utc": "1995-08-30T03:33:24+00:00",
+      "endpoint": "/shuttle/missions/sts-70/movies/sts-70-landing-2.mpg",
+      "http_method": "GET",
+      "status_code": 200,
+      "response_size_bytes": 266273,
+      "anomaly_score": 0.120868,
+      "indicators": {
+        "hour": 23,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3841,
+        "ip_error_rate_so_far": 0.0117,
+        "ip_unique_paths_so_far": 612,
+        "ip_requests_last_60s": 314
+      },
+      "raw_log_line": "piweba3y.prodigy.com - - [29/Aug/1995:23:33:24 -0400] \"GET /shuttle/missions/sts-70/movies/sts-70-landing-2.mpg HTTP/1.0\" 200 266273"
+    },
+    {
+      "ip": "piweba3y.prodigy.com",
+      "detection_time_utc": "1995-08-31T12:31:58+00:00",
+      "endpoint": "/cgi-bin/imagemap/countdown69?293,284",
+      "http_method": "GET",
+      "status_code": 302,
+      "response_size_bytes": 85,
+      "anomaly_score": 0.120715,
+      "indicators": {
+        "hour": 8,
+        "is_error": false,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 4236,
+        "ip_error_rate_so_far": 0.0106,
+        "ip_unique_paths_so_far": 660,
+        "ip_requests_last_60s": 210
+      },
+      "raw_log_line": "piweba3y.prodigy.com - - [31/Aug/1995:08:31:58 -0400] \"GET /cgi-bin/imagemap/countdown69?293,284 HTTP/1.0\" 302 85"
+    },
+    {
+      "ip": "www-d1.proxy.aol.com",
+      "detection_time_utc": "1995-08-25T07:39:18+00:00",
+      "endpoint": "/shuttle/missions/sts-287movies/",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.12066,
+      "indicators": {
+        "hour": 3,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3083,
+        "ip_error_rate_so_far": 0.0055,
+        "ip_unique_paths_so_far": 662,
+        "ip_requests_last_60s": 237
+      },
+      "raw_log_line": "www-d1.proxy.aol.com - - [25/Aug/1995:03:39:18 -0400] \"GET /shuttle/missions/sts-287movies/ HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "osk0169.bekkoame.or.jp",
+      "detection_time_utc": "1995-08-31T06:15:48+00:00",
+      "endpoint": "/images/ksclogo-medium.gif",
+      "http_method": "GET",
+      "status_code": 200,
+      "response_size_bytes": 5866,
+      "anomaly_score": 0.120428,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 3389,
+        "ip_error_rate_so_far": 0.005,
+        "ip_unique_paths_so_far": 615,
+        "ip_requests_last_60s": 177
+      },
+      "raw_log_line": "osk0169.bekkoame.or.jp - - [31/Aug/1995:02:15:48 -0400] \"GET /images/ksclogo-medium.gif HTTP/1.0\" 200 5866"
+    },
+    {
+      "ip": "dialip-217.den.mmc.com",
+      "detection_time_utc": "1995-08-30T06:49:45+00:00",
+      "endpoint": "/history/apollo/a-004/a-004-patch-small.gif",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.120284,
+      "indicators": {
+        "hour": 2,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 97,
+        "ip_error_rate_so_far": 0.5979,
+        "ip_unique_paths_so_far": 48,
+        "ip_requests_last_60s": 97
+      },
+      "raw_log_line": "dialip-217.den.mmc.com - - [30/Aug/1995:02:49:45 -0400] \"GET /history/apollo/a-004/a-004-patch-small.gif HTTP/1.0\" 404 -"
+    },
+    {
+      "ip": "pm3-00.magicnet.net",
+      "detection_time_utc": "1995-08-31T03:34:18+00:00",
+      "endpoint": "/html",
+      "http_method": "GET",
+      "status_code": 404,
+      "response_size_bytes": 0,
+      "anomaly_score": 0.120262,
+      "indicators": {
+        "hour": 23,
+        "is_error": true,
+        "suspicious_pattern": 0,
+        "malformed_request": false,
+        "ip_requests_so_far": 1,
+        "ip_error_rate_so_far": 1.0,
+        "ip_unique_paths_so_far": 1,
+        "ip_requests_last_60s": 1
+      },
+      "raw_log_line": "pm3-00.magicnet.net - - [30/Aug/1995:23:34:18 -0400] \"GET /html HTTP/1.0\" 404 -"
+    }
+  ],
+  "disclaimer": "This report identifies statistical outliers relative to a learned baseline of normal traffic using unsupervised Isolation Forest. It does NOT confirm malicious intent. Every flagged entry should be reviewed by a human analyst before any action is taken."
+}
