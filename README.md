@@ -4,6 +4,46 @@ Unsupervised anomaly detection for Apache/NGINX-style server access logs, using
 Isolation Forest. Built and validated against a real 1.57-million-row NASA-HTTP
 access log (August 1995, standard Apache Common Log Format).
 
+## Live Demo
+
+Interactive Streamlit UI (upload a log or use the built-in demo sample):
+
+`https://YOUR-RENDER-URL.onrender.com`
+
+The live demo lets visitors upload a small Apache/Nginx Common Log Format
+access log (or load `sample/suspicious_logs.log`), run the existing Overwatch
+parser → feature engineering → Isolation Forest pipeline, view summary metrics
+and charts, and download the Threat Intelligence Report. Anomalies are
+statistical outliers relative to the trained baseline — not confirmed attacks.
+Uploads are capped for hosting memory limits; full-scale offline runs still use
+the CLI below.
+
+## Running Locally
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+## Deployment
+
+Deploy on [Render](https://render.com) as a **Web Service**:
+
+**Build command:**
+
+```bash
+pip install -r requirements.txt
+```
+
+**Start command:**
+
+```bash
+streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
+```
+
+Do not hard-code a port. Ensure `models/isolation_forest.joblib` is present in
+the repository (paths are repository-relative and Linux-compatible).
+
 ## Objective
 
 Detect unusual, potentially suspicious HTTP requests in a server access log
@@ -256,6 +296,7 @@ deterministic given the same input file).
 
 ```
 Overwatch/
+├── app.py                             # Streamlit frontend (calls existing pipeline)
 ├── README.md
 ├── requirements.txt
 ├── .gitignore

@@ -23,7 +23,7 @@ import pandas as pd
 
 sys.path.insert(0, os.path.dirname(__file__))
 from feature_engineering import build_features  # noqa: E402
-from log_parser import parse_log_file  # noqa: E402
+from log_parser import parse_log_file, parse_log_text  # noqa: E402
 from report_generator import (  # noqa: E402
     build_json_report,
     build_text_report,
@@ -32,23 +32,19 @@ from report_generator import (  # noqa: E402
 )
 
 
-def detect(
-    log_file: str,
-    model_path: str,
-    dataset_label: str = "real",
-) -> pd.DataFrame:
+def score_dataframe(df: pd.DataFrame, model_path: str) -> pd.DataFrame:
+    """Run the trained Isolation Forest on an already-parsed log DataFrame.
+
+    Same feature engineering, scaler, and model as detect() — no ML changes.
+    """
+    if len(df) == 0:
+        raise ValueError("No rows could be parsed from the supplied log file.")
+
     print(f"[detect] loading model bundle from {model_path} ...")
     bundle = joblib.load(model_path)
     model = bundle["model"]
     scaler = bundle["scaler"]
     feature_columns = bundle["feature_columns"]
-
-    print(f"[detect] parsing {log_file} ...")
-    df, stats = parse_log_file(log_file)
-    print(f"[detect] parsed {len(df):,} rows ({stats.summary()})")
-
-    if len(df) == 0:
-        raise ValueError("No rows could be parsed from the supplied log file.")
 
     print("[detect] building features (same pipeline used in training) ...")
     features = build_features(df)
@@ -71,6 +67,32 @@ def detect(
           f"({100 * n_anom / len(scored):.2f}%)")
 
     return scored
+
+
+def detect(
+    log_file: str,
+    model_path: str,
+    dataset_label: str = "real",
+) -> pd.DataFrame:
+    print(f"[detect] parsing {log_file} ...")
+    df, stats = parse_log_file(log_file)
+    print(f"[detect] parsed {len(df):,} rows ({stats.summary()})")
+    return score_dataframe(df, model_path)
+
+
+def detect_from_text(
+    log_text: str,
+    model_path: str,
+) -> tuple[pd.DataFrame, object]:
+    """Parse in-memory log text and score it with the trained model.
+
+    Returns (scored_df, parse_stats). Used by the Streamlit frontend.
+    """
+    print("[detect] parsing in-memory log text ...")
+    df, stats = parse_log_text(log_text, verbose=True)
+    print(f"[detect] parsed {len(df):,} rows ({stats.summary()})")
+    scored = score_dataframe(df, model_path)
+    return scored, stats
 
 
 def main():

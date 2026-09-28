@@ -89,72 +89,66 @@ def _parse_size(raw: str) -> int:
         return 0
 
 
-def parse_log_file(path: str, verbose: bool = True) -> tuple[pd.DataFrame, ParseStats]:
-    """Parse a CLF access log file into a DataFrame.
+def _parse_lines(lines, stats: ParseStats | None = None) -> tuple[pd.DataFrame, ParseStats]:
+    """Core CLF line parser shared by file- and text-based entry points.
 
-    Returns
-    -------
-    (df, stats) : the parsed DataFrame and a ParseStats summary.
-
-    Columns produced
-    ----------------
-    ip, timestamp (tz-aware datetime), method, path, protocol,
-    status (int), size (int, bytes), raw_line (original untouched line)
+    Behavior is identical to the original parse_log_file loop: strict regex
+    first, loose fallback second, same column schema and timestamp handling.
     """
-    stats = ParseStats()
+    if stats is None:
+        stats = ParseStats()
     rows = []
 
-    with open(path, "r", encoding="utf-8", errors="replace") as f:
-        for line in f:
-            stats.total_lines += 1
-            raw_line = line.rstrip("\n")
+    for line in lines:
+        stats.total_lines += 1
+        raw_line = line.rstrip("\n").rstrip("\r")
 
-            m = _STRICT_PATTERN.match(raw_line)
-            if m:
-                stats.parsed_strict += 1
-                d = m.groupdict()
-                path_val = d["path"]
-                method_val = d["method"]
-                is_malformed = False
-            else:
-                m = _LOOSE_PATTERN.match(raw_line)
-                if not m:
-                    stats.dropped += 1
-                    continue
-                stats.parsed_loose += 1
-                d = m.groupdict()
-                # In the loose match, "rest" holds the entire malformed
-                # request content (path plus any embedded quotes/HTML/
-                # injection-style payload, and usually a trailing protocol
-                # token). Previously this was collapsed to just its first
-                # whitespace-delimited token, which silently threw away
-                # everything after the first space (e.g. injected
-                # <IMG SRC=...> markup or extra quote characters) even
-                # though `raw_line` still had it. We now keep the FULL
-                # content: strip a trailing " HTTP/x.y" if present, and use
-                # everything else, unmodified, as `path`. This preserves
-                # the complete request/payload for malformed lines while
-                # `raw_line` remains the untouched original.
-                method_val = d["method"]
-                rest = d["rest"] or ""
-                proto_match = _TRAILING_PROTOCOL.search(rest)
-                path_val = rest[: proto_match.start()] if proto_match else rest
-                if not path_val:
-                    path_val = "-"
-                is_malformed = True
+        m = _STRICT_PATTERN.match(raw_line)
+        if m:
+            stats.parsed_strict += 1
+            d = m.groupdict()
+            path_val = d["path"]
+            method_val = d["method"]
+            is_malformed = False
+        else:
+            m = _LOOSE_PATTERN.match(raw_line)
+            if not m:
+                stats.dropped += 1
+                continue
+            stats.parsed_loose += 1
+            d = m.groupdict()
+            # In the loose match, "rest" holds the entire malformed
+            # request content (path plus any embedded quotes/HTML/
+            # injection-style payload, and usually a trailing protocol
+            # token). Previously this was collapsed to just its first
+            # whitespace-delimited token, which silently threw away
+            # everything after the first space (e.g. injected
+            # <IMG SRC=...> markup or extra quote characters) even
+            # though `raw_line` still had it. We now keep the FULL
+            # content: strip a trailing " HTTP/x.y" if present, and use
+            # everything else, unmodified, as `path`. This preserves
+            # the complete request/payload for malformed lines while
+            # `raw_line` remains the untouched original.
+            method_val = d["method"]
+            rest = d["rest"] or ""
+            proto_match = _TRAILING_PROTOCOL.search(rest)
+            path_val = rest[: proto_match.start()] if proto_match else rest
+            if not path_val:
+                path_val = "-"
+            is_malformed = True
 
-            rows.append(
-                {
-                    "ip": d["host"],
-                    "timestamp_raw": d["timestamp"],
-                    "method": method_val,
-                    "path": path_val,
-                    "status": int(d["status"]) if d["status"].isdigit() else -1,
-                    "size": _parse_size(d["size"]),
-                    "malformed_request": is_malformed,
-                    "raw_line": raw_line,
-                }
-            )
+        rows.append(
+            {
+                "ip": d["host"],
+                "timestamp_raw": d["timestamp"],
+                "method": method_val,
+                "path": path_val,
+                "status": int(d["status"]) if d["status"].isdigit() else -1,
+                "size": _parse_size(d["size"]),
+                "malformed_request": is_malformed,
+                "raw_line": raw_line,
+            }
+        )
 
     df = pd.DataFrame(rows)
     if not df.empty:
@@ -169,6 +163,36 @@ def parse_log_file(path: str, verbose: bool = True) -> tuple[pd.DataFrame, Parse
             df = df[df["timestamp"].notna()].copy()
         df = df.drop(columns=["timestamp_raw"])
         df = df.sort_values("timestamp").reset_index(drop=True)
+
+    return df, stats
+
+
+def parse_log_text(text: str, verbose: bool = True) -> tuple[pd.DataFrame, ParseStats]:
+    """Parse CLF access-log text (e.g. an uploaded file) into a DataFrame.
+
+    Same schema and matching rules as parse_log_file.
+    """
+    lines = text.splitlines()
+    df, stats = _parse_lines(lines)
+    if verbose:
+        print(f"[log_parser] {stats.summary()}")
+    return df, stats
+
+
+def parse_log_file(path: str, verbose: bool = True) -> tuple[pd.DataFrame, ParseStats]:
+    """Parse a CLF access log file into a DataFrame.
+
+    Returns
+    -------
+    (df, stats) : the parsed DataFrame and a ParseStats summary.
+
+    Columns produced
+    ----------------
+    ip, timestamp (tz-aware datetime), method, path, protocol,
+    status (int), size (int, bytes), raw_line (original untouched line)
+    """
+    with open(path, "r", encoding="utf-8", errors="replace") as f:
+        df, stats = _parse_lines(f)
 
     if verbose:
         print(f"[log_parser] {stats.summary()}")
